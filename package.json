@@ -1,0 +1,22 @@
+{
+  "name": "pokedex-php",
+  "version": "1.0.0",
+  "description": "pokedex desenvolvida em php consumido PokeApi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fagnerpelicioni/pokedex.git"
+  },
+  "author": "Fagner Pelicioni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fagnerpelicioni/pokedex/issues"
+  },
+  "homepage": "https://github.com/fagnerpelicioni/pokedex#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
