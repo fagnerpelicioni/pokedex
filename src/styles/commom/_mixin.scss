@@ -1,0 +1,112 @@
+/* Mixin para media queries
+Exemplo de uso:
+.site-header {
+    padding: 2rem;
+    font-size: 1.8rem;
+    @include mq('tablet-wide') {
+        padding-top: 4rem;
+        font-size: 2.4rem;
+    }
+}
+*/
+$breakpoints: (
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      560px,
+    "tablet-small": 640px,
+    "tablet":       768px,
+    "tablet-wide":  1024px,
+    "desktop":      1248px,
+    "desktop-wide": 1440px
+);
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+/* Mixin para estilo de placeholders
+Exemplo de uso:
+input,  
+textarea {  
+    @include input-placeholder {
+        color: $grey;
+    }
+}
+*/
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+//Padding mixin
+@mixin padding($top, $right, $bottom, $left) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+  }
+  //Margin mixin
+  @mixin margin($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+  }
+
+// Diversos
+@mixin gradient($angle,$gradient1, $gradient2) {
+  background-color: $gradient2;
+  background-image: -webkit-gradient(linear, $angle, from($gradient1), to($gradient2));
+  background-image: -webkit-linear-gradient($angle, $gradient1, $gradient2);
+  background-image:    -moz-linear-gradient($angle, $gradient1, $gradient2);
+  background-image:     -ms-linear-gradient($angle, $gradient1, $gradient2);
+  background-image:      -o-linear-gradient($angle, $gradient1, $gradient2);
+  background-image:         linear-gradient($angle, $gradient1, $gradient2);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=$angle,StartColorStr='#{$gradient1}', EndColorStr='#{$gradient2}');
+}
+
+@mixin transition($transition...) {
+  -moz-transition:    all $transition linear;
+  -o-transition:      all $transition linear;
+  -webkit-transition: all $transition linear;
+  transition:         all $transition linear;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@function calculateRem($size) { 
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) { 
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin opacity($opacity) { 
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie);
+}
+
+// Background Color Opacity
+@mixin background-opacity($color: #000, $opacity: 0.85) {
+  background: $color;
+  background: rgba($color, $opacity);
+}

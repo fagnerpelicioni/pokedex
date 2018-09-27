@@ -31,7 +31,7 @@ foreach (array_slice($types->results, 0, 6) as $type) {
 
 echo "<br>";
 
-foreach (array_slice($pokemons->results, 0, 151) as $pokemon) {
+foreach (array_slice($pokemons->results, 0, 9) as $pokemon) {
     $nome = $pokemon->name;
     $link = $pokemon->url;
     $id = $helper->getPokemonIdbyLink($link);
