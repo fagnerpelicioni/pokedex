@@ -1,6 +1,6 @@
 body {
     font-family: 'Raleway', sans-serif;
-	color: $branco;
+	color: $black;
     font-weight: 100;
     height: 100vh;
     margin: 0;
@@ -9,6 +9,9 @@ body {
  
 }
 
+a {
+    color: $branco;
+}
 
 .barra-superior {
     background-color: $cinza-escuro;
