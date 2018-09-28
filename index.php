@@ -31,20 +31,39 @@ foreach (array_slice($types->results, 0, 6) as $type) {
 
 echo "<br>";
 
-foreach (array_slice($pokemons->results, 0, 9) as $pokemon) {
-    $nome = $pokemon->name;
-    $link = $pokemon->url;
-    $id = $helper->getPokemonIdbyLink($link);
-    
-    $image = $data->getPokeImage($id);
+?>
 
-    ?>
 
-    <img src="<?=$image;?>">
-    <a href="pokemon.php?nome=<?= $nome; ?>"><?= $nome; ?></a><br>
+<div class="container">
+    <div class="row">
 
     <?php
-}
+    foreach (array_slice($pokemons->results, 0, 9) as $pokemon) {
+        $nome = $pokemon->name;
+        $link = $pokemon->url;
+        $id = $helper->getPokemonIdbyLink($link);
+        
+        $image = $data->getPokeImage($id);
+
+        ?>
+        <div class="col-md-4 poke-card">
+
+            <img class="responsive" src="<?=$image;?>">
+            <p><a href="pokemon.php?nome=<?= $nome; ?>"><?= $nome; ?></a></p>
+
+        </div>
+
+        <?php
+    }
+    ?>
+
+    </div>
+</div>
+
+
+
+
+<?php
 
 include 'includes/footer.php';
 

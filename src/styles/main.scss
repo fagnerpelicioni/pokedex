@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 // Import geral dos componentes do bower, adicionar diretório aqui sempre que novo pacote for instalado
 @import "../../node_modules/bootstrap/scss/bootstrap-reboot.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
@@ -9,7 +11,6 @@
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims.scss";
-//@import "../../bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
 
 // Import de todos os componentes de estilo do projeto, adicionar aqui sempre que for criado um novo arquivo
 @import "commom/variables.scss";

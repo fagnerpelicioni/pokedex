@@ -1,1 +1,0 @@
-console.log("funcionou arquivo 2");

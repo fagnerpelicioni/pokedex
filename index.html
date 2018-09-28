@@ -5,13 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="dist/images/favico.png">
     <link rel="stylesheet" type="text/css" media="screen" href="dist/styles/main.css" />
-    <script src="dist/scripts/main.js"></script>
+    <script src="dist/scripts/main.js" type="application/javascript"></script>
+
 </head>
 <body>
+
+<header>
+    <div class="barra-superior">
+        <h6>Starter Web Project</h6>
+      </div>
+      <nav>
+
+      </nav>
+</header>
     
-<h1>Hello World <i class="fas fa-globe-americas"></i></h1><span class="fa fa-twitter"></span>
-<button class="btn btn-danger">Botão</button>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 principal">
+
+            <h1 class="titulo">welcome</h1>
+
+            <p><span id="greeting">Good Morning, User</span> meu nome é Fagner. Está pronto para começar?</p>
+
+            <h3 class="horario" id="time">12:00 AM</h3>
+            <h5 class="dia" id="day" class="display-5">Monday, January 01</h5>
+            <br>
+                    <div class="dropdown">
+                      <button class="btn btn-danger dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Dropdown
+                      <span class="caret"></span></button>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+                      </ul>
+                    </div>
+
+            <br>
+            <br>
+
+            <p><strong>Nota:</strong> Se está vendo a página estilizada, a data correta, e o dropdrown, todas as ferramentas foram instaladas com sucesso.</p>
+                  
+        </div>
+    </div>    
+</div>
+
+<footer class="clearfix" id="footer">
+    <div class="footer-container clearfix">
+      <small><span>Designed and Coded </span>By - Pelicioni Web Studios. Made with <i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></small>
+      <ul class="footer-links">
+        <li><a href="https://github.com/fagnerpelicioni" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        <li><a href="https://linkedin.com/fagnerpelicioni" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+        <li><a href="http://www.pelicioni.com" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+  </footer>
 
 </body>
 </html>

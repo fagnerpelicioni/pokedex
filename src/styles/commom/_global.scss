@@ -1,3 +1,52 @@
 body {
-    background-color: $branco;
+    font-family: 'Raleway', sans-serif;
+	color: $branco;
+    font-weight: 100;
+    height: 100vh;
+    margin: 0;
+    background: $azul;
+    @include gradient(180deg, $azul-piscina, $verde-claro);
+ 
 }
+
+
+.barra-superior {
+    background-color: $cinza-escuro;
+    color: $branco;
+    text-align: right;
+  
+    h6 {
+        padding-right: 1%;
+        letter-spacing: .1rem;
+        font-size: 10px;
+        margin: 0px;
+        font-weight: bold;
+        color: $cinza-claro;
+        display: inline-block;
+    }
+  
+  }
+  
+
+.principal {
+    text-align: center;
+    position: absolute;
+    top: 30%;
+
+    .titulo {
+		font-size: 84px;
+		transition-duration: 1s;
+		transition-timing-function: ease-in-put;
+		font-weight: 200;
+    }
+    
+    .horario {
+        font-size: 40px;
+        font-weight: 200;
+    }
+    .dia {
+        font-size: 20px;
+        font-weight: 200;
+    }
+}
+
